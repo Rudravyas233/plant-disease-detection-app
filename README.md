@@ -264,7 +264,7 @@ CNNs were effectively used for classifying 38 plant disease categories from leaf
 
 ✅ Hosted with [GitHub Pages](https://pages.github.com/)
 
+## 👤 Author
+**Rudra Vyas**    
+🔗 GitHub: [@Rudravyas233](https://github.com/Rudravyas233)
 
-## 👨‍💻 Author
-
-## **Rudra Vyas**
