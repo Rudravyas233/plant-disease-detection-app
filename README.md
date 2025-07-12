@@ -255,6 +255,15 @@ CNNs were effectively used for classifying 38 plant disease categories from leaf
 **Upload any plant leaf image to detect its disease class in real time!**
 
 ---
+---
+
+## 🌍 Project Website
+
+📄 View the README as a public website:  
+👉 [https://rudravyas233.github.io/plant-disease-detection-app/](https://rudravyas233.github.io/plant-disease-detection-app/)
+
+✅ Hosted with [GitHub Pages](https://pages.github.com/)
+
 
 ## 👨‍💻 Author
 
