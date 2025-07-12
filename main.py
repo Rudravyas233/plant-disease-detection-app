@@ -1,13 +1,22 @@
 import streamlit as st
 import tensorflow as tf
 import numpy as np
+import gdown
+import os
 
-#Tensorflow Model Prediction
 def model_prediction(test_image):
-    model  = tf.keras.models.load_model('trained_model.keras')
-    image = tf.keras.preprocessing.image.load_img(test_image,target_size=(128, 128))
+    # Download model if not exists
+    model_path = 'trained_model.keras'
+    if not os.path.exists(model_path):
+        url = "https://drive.google.com/uc?id=1TCZ23nuYdQNTou4jlvKeN1aN4I2b7xEg"  # your file ID
+        gdown.download(url, model_path, quiet=False)
+    
+    # Load the model
+    model  = tf.keras.models.load_model(model_path)
+
+    image = tf.keras.preprocessing.image.load_img(test_image, target_size=(128, 128))
     input_arr = tf.keras.preprocessing.image.img_to_array(image)
-    input_arr = np.array([input_arr]) #Convert single image to a batch
+    input_arr = np.array([input_arr])  # Convert single image to a batch
     prediction = model.predict(input_arr)
     result_index = np.argmax(prediction)
     return result_index
