@@ -1,7 +1,10 @@
 services:
   - type: web
-    name: plant-disease-detection
-    env: python
-    plan: free
+    name: plant-disease-detection-app
+    runtime: python
+    pythonVersion: 3.10.12
     buildCommand: pip install -r requirements.txt
     startCommand: streamlit run main.py --server.port=10000 --server.address=0.0.0.0
+    envVars:
+      - key: PORT
+        value: 10000
